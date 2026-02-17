@@ -49,3 +49,34 @@ console.log(typeof heros) // object
 console.log(typeof myObj) // object
 console.log(typeof myFunc) // function
 // Note: Arrays and Objects are of type 'object', while Functions are of type 'function'.
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++===
+
+//Stack (Primitive) and heap (Non-primitive)
+
+// let myName = "John" // stored in stack
+
+// let person = { // stored in heap
+//     name: "John",
+//     age: 30
+// }
+
+// let anotherPerson = person // anotherPerson is a reference to the same object in heap
+
+// console.log(person); // { name: 'John', age: 30 }
+// console.log(anotherPerson); // { name: 'John', age: 30 }
+
+// anotherPerson.age = 31
+
+// console.log(person);
+// console.log(anotherPerson); // { name: 'John', age: 31 } both person and anotherPerson reflect the change because they reference the same object in heap
+
+let myYoutubename = "Codevolution" // stored in stack
+
+let anothername = myYoutubename // anotherYoutubename is a copy of the value in stack
+anothername = "Codevolution Channel" // changing anotherYoutubename does not affect myYoutubename
+
+console.log(myYoutubename) // Codevolution
+console.log(anothername) // Codevolution Channel
